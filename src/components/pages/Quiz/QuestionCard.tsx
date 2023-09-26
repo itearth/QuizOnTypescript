@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Question } from '../../../types/types';
-import styles from './QuestionCard.module.css'; // Import the CSS module
+import styles from './QuestionCard.module.css';
 
 interface Props {
   question: Question;
@@ -8,7 +8,10 @@ interface Props {
 }
 
 const QuestionCard: React.FC<Props> = ({ question, onNext }) => {
+  const [selectedAnswer, setSelectedAnswer] = useState<string | null>(null);
+
   const handleAnswerClick = (answer: string) => {
+    setSelectedAnswer(answer); // Set the selected answer
     onNext(answer);
   };
 
@@ -21,14 +24,14 @@ const QuestionCard: React.FC<Props> = ({ question, onNext }) => {
         {question.incorrect_answers.map((answer, index) => (
           <button
             key={index}
-            className={`${styles['answer-button']} ${styles['incorrect-answer-button']}`}
+            className={`${styles['answer-button']} ${selectedAnswer === answer ? styles['incorrect-answer-button'] : ''}`}
             onClick={() => handleAnswerClick(answer)}
           >
             {answer}
           </button>
         ))}
         <button
-          className={`${styles['answer-button']} ${styles['correct-answer-button']}`}
+          className={`${styles['answer-button']} ${selectedAnswer === question.correct_answer ? styles['correct-answer-button'] : ''}`}
           onClick={() => handleAnswerClick(question.correct_answer)}
         >
           {question.correct_answer}

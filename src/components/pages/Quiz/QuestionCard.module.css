@@ -18,10 +18,10 @@
 }
 
 .correct-answer-button {
-  background-color: #28a745;
+  background-color: #28a745 !important;
 }
 
 .incorrect-answer-button {
-  background-color: #dc3545;
-  color: #fff; /* Add this to change text color to white */
+  background-color: #dc3545 !important;
+  color: #fff; 
 }
