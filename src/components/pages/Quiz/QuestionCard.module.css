@@ -1,0 +1,27 @@
+.question-card {
+  text-align: center;
+}
+
+.question-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.answer-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.correct-answer-button {
+  background-color: #28a745;
+}
+
+.incorrect-answer-button {
+  background-color: #dc3545;
+  color: #fff; /* Add this to change text color to white */
+}

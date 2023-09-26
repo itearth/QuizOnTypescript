@@ -1,0 +1,15 @@
+.quiz-app {
+  text-align: center;
+}
+
+.quiz-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.quiz-completed {
+  font-size: 18px;
+}
+
+
