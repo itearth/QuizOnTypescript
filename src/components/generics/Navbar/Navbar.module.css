@@ -1,0 +1,42 @@
+.navbar {
+  background: #f7aa00; 
+  color: #1f1c1c;
+  position: fixed; 
+  top: 0; 
+  width: 100%; 
+  z-index: 1; 
+  box-sizing: border-box;
+}
+
+.navList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+}
+
+.navItem {
+  margin-right: 40px;
+  transition: transform 0.2s;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #1f1c1c;
+  font-family: Neucha, sans-serif;
+  font-size: 1.2rem;
+}
+
+.navItem a:hover {
+  text-decoration: none;
+  transform: scale(1.1);
+ 
+}
+
+
+
+body, html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
